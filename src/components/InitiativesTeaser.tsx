@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Laptop, HeartPulse, Lightbulb } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 
@@ -19,6 +19,24 @@ const initiatives = [
   },
 ];
 
+const moreVerticals = [
+  {
+    tag: "Digital Academy",
+    body: "Practical digital literacy, AI tools and remote-work skills for adults 45 and above.",
+    icon: Laptop,
+  },
+  {
+    tag: "ActiveLife",
+    body: "Walking groups, yoga, dance fitness and community sports for healthier, connected lives.",
+    icon: HeartPulse,
+  },
+  {
+    tag: "Purpose Lab",
+    body: "Mentorship, advisory and consulting pathways that turn lifelong experience into impact.",
+    icon: Lightbulb,
+  },
+];
+
 export const InitiativesTeaser = () => (
   <section id="initiatives" className="bg-background py-16 md:py-24 border-t border-border/60">
     <div className="container">
@@ -30,8 +48,8 @@ export const InitiativesTeaser = () => (
           </h2>
         </div>
         <p className="max-w-md text-muted-foreground">
-          Voices is our pilot. Alongside it, two further initiatives invite elders into productive,
-          adventurous and connected later years.
+          Voices is our flagship. Alongside it, the ReEngage Africa Enterprise arm runs five
+          integrated verticals that keep our experienced generation productive, healthy and globally engaged.
         </p>
       </div>
 
@@ -66,6 +84,28 @@ export const InitiativesTeaser = () => (
             </div>
           </a>
         ))}
+      </div>
+
+      <div className="mt-5 grid gap-5 md:grid-cols-3">
+        {moreVerticals.map((v) => {
+          const Icon = v.icon;
+          return (
+            <div
+              key={v.tag}
+              className="group rounded-3xl border border-border bg-secondary/40 p-6 shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
+            >
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span className="text-[11px] uppercase tracking-[0.18em] text-primary">
+                  ReEngage {v.tag}
+                </span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>
