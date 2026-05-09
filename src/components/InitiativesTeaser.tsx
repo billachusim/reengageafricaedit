@@ -1,6 +1,9 @@
 import { ArrowUpRight, Laptop, HeartPulse, Lightbulb } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
+import academy from "@/assets/vertical-academy.jpg";
+import activelife from "@/assets/vertical-activelife.jpg";
+import purposelab from "@/assets/vertical-purposelab.jpg";
 
 const initiatives = [
   {
@@ -24,16 +27,19 @@ const moreVerticals = [
     tag: "Digital Academy",
     body: "Practical digital literacy, AI tools and remote-work skills for adults 45 and above.",
     icon: Laptop,
+    image: academy,
   },
   {
     tag: "ActiveLife",
     body: "Walking groups, yoga, dance fitness and community sports for healthier, connected lives.",
     icon: HeartPulse,
+    image: activelife,
   },
   {
     tag: "Purpose Lab",
     body: "Mentorship, advisory and consulting pathways that turn lifelong experience into impact.",
     icon: Lightbulb,
+    image: purposelab,
   },
 ];
 
@@ -92,17 +98,28 @@ export const InitiativesTeaser = () => (
           return (
             <div
               key={v.tag}
-              className="group rounded-3xl border border-border bg-secondary/40 p-6 shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
+              className="group overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
             >
-              <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Icon className="h-5 w-5" />
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={v.image}
+                  alt={v.tag}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
+                <span className="absolute left-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-background/90 text-primary shadow-card">
+                  <Icon className="h-4 w-4" />
                 </span>
+              </div>
+              <div className="p-6">
                 <span className="text-[11px] uppercase tracking-[0.18em] text-primary">
                   ReEngage {v.tag}
                 </span>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
             </div>
           );
         })}
