@@ -100,7 +100,7 @@ export const InitiativesTeaser = () => (
               key={v.tag}
               className="group overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <img
                   src={v.image}
                   alt={v.tag}
