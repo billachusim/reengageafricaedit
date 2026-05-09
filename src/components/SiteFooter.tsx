@@ -34,6 +34,9 @@ export const SiteFooter = () => (
           <li><a href={VOICES_URL} className="hover:text-primary">African Voices</a></li>
           <li><a href="#initiatives" className="hover:text-primary">AgriVentures</a></li>
           <li><a href="#initiatives" className="hover:text-primary">Global Mobility</a></li>
+          <li><a href="#initiatives" className="hover:text-primary">Digital Academy</a></li>
+          <li><a href="#initiatives" className="hover:text-primary">ActiveLife</a></li>
+          <li><a href="#initiatives" className="hover:text-primary">Purpose Lab</a></li>
         </ul>
       </div>
 
