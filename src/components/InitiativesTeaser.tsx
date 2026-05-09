@@ -1,4 +1,4 @@
-import { ArrowUpRight, Laptop, HeartPulse, Lightbulb } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 import academy from "@/assets/vertical-academy.jpg";
@@ -25,21 +25,24 @@ const initiatives = [
 const moreVerticals = [
   {
     tag: "Digital Academy",
+    title: "Digital fluency for the wisdom years.",
     body: "Practical digital literacy, AI tools and remote-work skills for adults 45 and above.",
-    icon: Laptop,
     image: academy,
+    href: "#academy",
   },
   {
     tag: "ActiveLife",
+    title: "Movement, community and longevity.",
     body: "Walking groups, yoga, dance fitness and community sports for healthier, connected lives.",
-    icon: HeartPulse,
     image: activelife,
+    href: "#activelife",
   },
   {
     tag: "Purpose Lab",
+    title: "Turning lifelong experience into impact.",
     body: "Mentorship, advisory and consulting pathways that turn lifelong experience into impact.",
-    icon: Lightbulb,
     image: purposelab,
+    href: "#purposelab",
   },
 ];
 
@@ -93,34 +96,36 @@ export const InitiativesTeaser = () => (
       </div>
 
       <div className="mt-5 grid gap-5 md:grid-cols-3">
-        {moreVerticals.map((v) => {
-          const Icon = v.icon;
-          return (
-            <div
-              key={v.tag}
-              className="group relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <img
-                  src={v.image}
-                  alt={v.tag}
-                  loading="lazy"
-                  width={800}
-                  height={1000}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/30 to-transparent" />
-                <div className="absolute inset-0 flex flex-col justify-end p-6 text-night-foreground">
-                  <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
-                    <Icon className="h-3.5 w-3.5" />
-                    ReEngage {v.tag}
-                  </span>
-                  <p className="mt-3 text-sm leading-relaxed text-night-foreground/85">{v.body}</p>
-                </div>
+        {moreVerticals.map((v) => (
+          <a
+            key={v.tag}
+            href={v.href}
+            className="group relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
+          >
+            <div className="relative aspect-[5/4] overflow-hidden">
+              <img
+                src={v.image}
+                alt={v.tag}
+                loading="lazy"
+                width={1200}
+                height={960}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/30 to-transparent" />
+              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
+                  ReEngage {v.tag}
+                </span>
+                <h3 className="mt-4 font-serif text-2xl md:text-3xl text-balance">{v.title}</h3>
+                <p className="mt-3 max-w-md text-sm text-night-foreground/85">{v.body}</p>
+                <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-night-foreground">
+                  Learn more
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
               </div>
             </div>
-          );
-        })}
+          </a>
+        ))}
       </div>
     </div>
   </section>
