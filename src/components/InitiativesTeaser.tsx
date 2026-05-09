@@ -98,27 +98,25 @@ export const InitiativesTeaser = () => (
           return (
             <div
               key={v.tag}
-              className="group overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
+              className="group relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
             >
-              <div className="relative aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <img
                   src={v.image}
                   alt={v.tag}
                   loading="lazy"
                   width={800}
-                  height={600}
+                  height={1000}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
-                <span className="absolute left-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-background/90 text-primary shadow-card">
-                  <Icon className="h-4 w-4" />
-                </span>
-              </div>
-              <div className="p-6">
-                <span className="text-[11px] uppercase tracking-[0.18em] text-primary">
-                  ReEngage {v.tag}
-                </span>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/30 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-end p-6 text-night-foreground">
+                  <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
+                    <Icon className="h-3.5 w-3.5" />
+                    ReEngage {v.tag}
+                  </span>
+                  <p className="mt-3 text-sm leading-relaxed text-night-foreground/85">{v.body}</p>
+                </div>
               </div>
             </div>
           );
