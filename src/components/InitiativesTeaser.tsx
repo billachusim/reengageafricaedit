@@ -78,13 +78,14 @@ export const InitiativesTeaser = () => (
                 height={800}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/30 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground">
+              <div className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-night/10" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-night/90 to-transparent" />
+              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
                 <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
                   ReEngage {i.tag}
                 </span>
                 <h3 className="mt-4 font-serif text-2xl md:text-3xl text-balance">{i.title}</h3>
-                <p className="mt-3 max-w-md text-sm text-night-foreground/85">{i.body}</p>
+                <p className="mt-3 max-w-md text-sm text-night-foreground/90">{i.body}</p>
                 <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-night-foreground">
                   Learn more
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -111,13 +112,14 @@ export const InitiativesTeaser = () => (
                 height={960}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/30 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground">
+              <div className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-night/10" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-night/90 to-transparent" />
+              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
                 <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
                   ReEngage {v.tag}
                 </span>
                 <h3 className="mt-4 font-serif text-2xl md:text-3xl text-balance">{v.title}</h3>
-                <p className="mt-3 max-w-md text-sm text-night-foreground/85">{v.body}</p>
+                <p className="mt-3 max-w-md text-sm text-night-foreground/90">{v.body}</p>
                 <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-night-foreground">
                   Learn more
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
