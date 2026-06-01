@@ -39,13 +39,13 @@ export const ContactSection = () => {
               <span className="grid h-10 w-10 place-items-center rounded-full bg-secondary text-primary">
                 <Mail className="h-4 w-4" />
               </span>
-              <a href="mailto:hello@reengageafrica.com" className="hover:text-primary">hello@reengageafrica.com</a>
+              <a href="mailto:info@reengageafrica.com" className="hover:text-primary">info@reengageafrica.com</a>
             </li>
             <li className="flex items-center gap-3">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-secondary text-primary">
                 <MapPin className="h-4 w-4" />
               </span>
-              Lagos · Accra · Nairobi
+              Abuja · Accra · Nairobi
             </li>
           </ul>
         </div>
