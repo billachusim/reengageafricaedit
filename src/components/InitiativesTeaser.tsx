@@ -1,9 +1,11 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 import academy from "@/assets/vertical-academy.jpg";
 import activelife from "@/assets/vertical-activelife.jpg";
 import purposelab from "@/assets/vertical-purposelab.jpg";
+import voicesTeaser from "@/assets/voices-teaser.jpg";
+import { VOICES_URL } from "@/config/links";
 
 const initiatives = [
   {
