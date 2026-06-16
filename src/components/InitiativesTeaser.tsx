@@ -1,11 +1,9 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 import academy from "@/assets/vertical-academy.jpg";
 import activelife from "@/assets/vertical-activelife.jpg";
 import purposelab from "@/assets/vertical-purposelab.jpg";
-import voicesTeaser from "@/assets/voices-teaser.jpg";
-import { VOICES_URL } from "@/config/links";
 
 const initiatives = [
   {
@@ -64,40 +62,7 @@ export const InitiativesTeaser = () => (
         </p>
       </div>
 
-      <a
-        href={VOICES_URL}
-        className="group mt-10 relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
-      >
-        <div className="relative aspect-[21/9] overflow-hidden md:aspect-[3/1]">
-          <img
-            src={voicesTeaser}
-            alt="ReEngage Voices"
-            loading="lazy"
-            width={1200}
-            height={560}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-night via-night/80 to-night/20" />
-          <div className="absolute inset-0 flex flex-col justify-center p-8 md:p-12 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-primary-foreground">
-              Now Live
-            </span>
-            <h3 className="mt-4 max-w-2xl font-serif text-3xl md:text-4xl text-balance">
-              ReEngage Voices — African heritage stories and lived experiences.
-            </h3>
-            <p className="mt-3 max-w-xl text-sm text-night-foreground/90">
-              Explore video, audio, photo essays and written stories from elders and
-              communities across the continent. A living archive of wisdom, memory and identity.
-            </p>
-            <span className="mt-6 inline-flex w-fit items-center gap-1 rounded-full bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-transform group-hover:translate-x-0.5">
-              Visit Voices
-              <ArrowRight className="h-4 w-4" />
-            </span>
-          </div>
-        </div>
-      </a>
-
-      <div className="mt-5 grid gap-5 md:grid-cols-2">
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
         {initiatives.map((i) => (
           <a
             key={i.tag}
