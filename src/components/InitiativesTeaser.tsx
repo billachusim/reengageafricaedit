@@ -66,7 +66,10 @@ export const InitiativesTeaser = () => (
         </p>
       </div>
 
-      <div className="mt-10 grid gap-4 md:gap-5 md:grid-cols-2">
+      <VoicesFeature />
+
+      <div className="mt-14 md:mt-20 grid gap-4 md:gap-5 md:grid-cols-2">
+
         {initiatives.map((i) => (
           <a
             key={i.tag}
