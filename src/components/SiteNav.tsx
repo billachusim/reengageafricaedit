@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import logo from "@/assets/reengage-logo.png";
 
 const links = [
-  { href: "#voices", label: "Voices" },
+  
   { href: "#initiatives", label: "Initiatives" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },

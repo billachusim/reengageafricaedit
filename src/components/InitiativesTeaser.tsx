@@ -51,16 +51,17 @@ export const InitiativesTeaser = () => (
     <div className="container">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary">More from ReEngage Africa</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-primary">Our initiatives</p>
           <h2 className="mt-3 font-serif text-3xl md:text-5xl text-balance">
-            Beyond Voices, an ecosystem for the wisdom years.
+            One vision, expressed across the continent.
           </h2>
         </div>
         <p className="max-w-md text-muted-foreground">
-          Voices is our flagship. Alongside it, the ReEngage Africa Enterprise arm runs five
-          integrated verticals that keep our experienced generation productive, healthy and globally engaged.
+          ReEngage Africa runs integrated initiatives that keep our experienced generation productive,
+          healthy, connected and globally engaged.
         </p>
       </div>
+
 
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {initiatives.map((i) => (

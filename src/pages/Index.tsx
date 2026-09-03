@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { AudioProvider } from "@/hooks/useAudioPlayer";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
-import { VoicesSpotlight } from "@/components/VoicesSpotlight";
-import { HowItWorks } from "@/components/HowItWorks";
 import { InitiativesTeaser } from "@/components/InitiativesTeaser";
 import { AboutBlock } from "@/components/AboutBlock";
 import { ContactSection } from "@/components/ContactSection";
@@ -23,7 +21,7 @@ const Index = () => {
     })();
     meta.setAttribute(
       "content",
-      "ReEngage Africa preserves the voices, stories and wisdom of Africa's elders through African Voices, AgriVentures and Global Mobility."
+      "ReEngage Africa builds an ecosystem for Africa's experienced generation — enterprise, culture, learning, wellbeing and purpose."
     );
   }, []);
 
@@ -33,8 +31,6 @@ const Index = () => {
         <SiteNav />
         <main>
           <Hero />
-          <VoicesSpotlight />
-          <HowItWorks />
           <InitiativesTeaser />
           <AboutBlock />
           <ContactSection />
@@ -49,3 +45,4 @@ const Index = () => {
 };
 
 export default Index;
+
