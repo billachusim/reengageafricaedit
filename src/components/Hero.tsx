@@ -13,11 +13,12 @@ export const Hero = () => {
             alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
             width={1920}
             height={1088}
-            className="absolute left-[-30%] top-0 w-[160%] max-w-none md:inset-0 md:left-0 md:h-full md:w-full md:object-cover md:object-[50%_17%]"
+            className="absolute left-[-50%] top-0 w-[200%] max-w-none md:inset-0 md:left-0 md:h-full md:w-full md:object-cover md:object-[50%_17%]"
           />
         </picture>
 
 
+        <div className="absolute inset-x-0 top-[36%] h-[32%] bg-gradient-to-b from-transparent to-night md:hidden" />
         {/* Legibility gradients */}
         <div className="absolute inset-0 bg-gradient-night opacity-90 lg:opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-r from-night/65 via-night/20 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
