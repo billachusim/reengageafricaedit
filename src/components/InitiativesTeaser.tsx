@@ -76,7 +76,7 @@ export const InitiativesTeaser = () => (
             href={i.href}
             className="group relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
           >
-            <div className="relative aspect-[3/2] md:aspect-[7/5] overflow-hidden">
+            <div className="relative aspect-[7/5] lg:aspect-[3/2] overflow-hidden">
               <img
                 src={i.image}
                 alt={`ReEngage ${i.tag}`}
