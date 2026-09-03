@@ -49,8 +49,7 @@ export const VoicesFeature = () => (
             />
           </figure>
 
-          <p className="mt-5 font-serif text-xl md:text-2xl">Why Frogs Do Not Have Tails</p>
-          <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
             A timeless Igbo folktale about how the frog lost its tail — and how expensive
             procrastination can be.
           </p>
