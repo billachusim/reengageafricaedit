@@ -13,14 +13,14 @@ export const Hero = () => {
           <img
             src={heroMobileImg}
             alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
-            width={456}
-            height={544}
-            className="h-full w-full object-cover object-[50%_25%] md:object-[50%_17%]"
+            width={768}
+            height={1024}
+            className="h-full w-full object-cover object-[55%_25%] md:object-[50%_17%]"
           />
         </picture>
         {/* Legibility gradients */}
-        <div className="absolute inset-0 bg-gradient-night lg:opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-night/80 via-night/30 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
+        <div className="absolute inset-0 bg-gradient-night opacity-90 lg:opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/65 via-night/20 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
         {/* Desktop-only directional gradient: dark on the text side, clear over the subject */}
         <div className="absolute inset-0 hidden lg:block bg-gradient-to-l from-transparent via-transparent to-night/45" />
         <div className="absolute inset-0 grain pointer-events-none" />
