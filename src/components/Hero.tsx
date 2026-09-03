@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { VOICES_URL } from "@/config/links";
 import heroImg from "@/assets/hero-main.jpg";
+import heroMobileImg from "@/assets/hero-mobile.jpg";
 
 export const Hero = () => {
   return (
