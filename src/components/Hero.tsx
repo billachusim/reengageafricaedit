@@ -12,7 +12,7 @@ export const Hero = () => {
           alt="Confident older African woman overlooking a city skyline at golden hour"
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-center lg:object-[72%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-center lg:object-[62%_center] lg:-scale-x-100"
         />
         {/* Legibility gradients */}
         <div className="absolute inset-0 bg-gradient-night lg:opacity-70" />
