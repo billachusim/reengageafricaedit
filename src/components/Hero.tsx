@@ -8,7 +8,7 @@ export const Hero = () => {
     <section id="top" className="relative isolate overflow-hidden bg-night text-night-foreground">
       <div className="relative min-h-[88svh] md:min-h-[92svh]">
         <img
-          src={heroImg.url}
+          src={heroImg}
           alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
           width={1920}
           height={1080}
