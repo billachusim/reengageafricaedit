@@ -86,17 +86,11 @@ export const InitiativesTeaser = () => (
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-night/90 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span
-                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.18em] ${
-                      i.flagship
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-accent text-accent-foreground"
-                    }`}
-                  >
+                  <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
                     ReEngage {i.tag}
-                    {i.flagship && <Star className="h-3 w-3 fill-current" />}
                   </span>
                 </div>
+
                 <span className="mt-2 text-[11px] uppercase tracking-[0.18em] text-night-foreground/70">
                   {i.category}
                 </span>
