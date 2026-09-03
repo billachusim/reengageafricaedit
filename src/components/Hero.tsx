@@ -8,13 +8,16 @@ export const Hero = () => {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-night text-night-foreground">
       <div className="relative min-h-[88svh] md:min-h-[92svh]">
-        <img
-          src={heroImg}
-          alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 h-full w-full object-cover object-[60%_center] md:object-[62%_center] lg:object-[68%_center]"
-        />
+        <picture className="absolute inset-0 h-full w-full">
+          <source media="(min-width: 768px)" srcSet={heroImg} />
+          <img
+            src={heroMobileImg}
+            alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
+            width={456}
+            height={544}
+            className="h-full w-full object-cover object-[55%_35%] md:object-[62%_center]"
+          />
+        </picture>
         {/* Legibility gradients */}
         <div className="absolute inset-0 bg-gradient-night lg:opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-r from-night/80 via-night/30 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
