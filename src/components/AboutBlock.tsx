@@ -22,15 +22,15 @@ export const AboutBlock = () => (
           </p>
           <div className="mt-4 grid grid-cols-3 gap-6">
           <div>
-            <p className="font-serif text-4xl text-accent">120+</p>
+            <p className="font-serif text-4xl text-accent">15+</p>
             <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Stories archived</p>
           </div>
           <div>
-            <p className="font-serif text-4xl text-accent">14</p>
+            <p className="font-serif text-4xl text-accent">4</p>
             <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Languages</p>
           </div>
           <div>
-            <p className="font-serif text-4xl text-accent">9</p>
+            <p className="font-serif text-4xl text-accent">3</p>
             <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Countries</p>
           </div>
           </div>
