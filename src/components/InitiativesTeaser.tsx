@@ -1,21 +1,13 @@
-import { ArrowUpRight, Star } from "lucide-react";
-import voices from "@/assets/elder-new-1.jpg";
+import { ArrowUpRight } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 import academy from "@/assets/vertical-academy.jpg";
 import activelife from "@/assets/vertical-activelife.jpg";
 import purposelab from "@/assets/vertical-purposelab.jpg";
+import { VoicesFeature } from "@/components/VoicesFeature";
 
 const initiatives = [
-  {
-    tag: "Voices",
-    category: "Culture & Memory",
-    title: "Stories, folklore and lived experience preserved for the future.",
-    body: "Our flagship initiative records and shares the wisdom, memory and cultural heritage of Africa's older generation.",
-    href: "#voices",
-    image: voices,
-    flagship: true,
-  },
+
   {
     tag: "AgriVentures",
     category: "Work & Enterprise",
