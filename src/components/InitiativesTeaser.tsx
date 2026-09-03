@@ -1,4 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
+import voices from "@/assets/elder-new-1.jpg";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 import academy from "@/assets/vertical-academy.jpg";
@@ -7,7 +8,17 @@ import purposelab from "@/assets/vertical-purposelab.jpg";
 
 const initiatives = [
   {
+    tag: "Voices",
+    category: "Culture & Memory",
+    title: "Stories, folklore and lived experience preserved for the future.",
+    body: "Our flagship initiative records and shares the wisdom, memory and cultural heritage of Africa's older generation.",
+    href: "#voices",
+    image: voices,
+    flagship: true,
+  },
+  {
     tag: "AgriVentures",
+    category: "Work & Enterprise",
     title: "Turning land, time and savings into thriving agribusiness.",
     body: "We help midlife and retired adults build small-scale farms and commercial agricultural ventures across the continent.",
     href: "#agriventures",
@@ -15,34 +26,35 @@ const initiatives = [
   },
   {
     tag: "Global Mobility",
+    category: "Travel & Connection",
     title: "Curated travel for those entering their richest chapter.",
     body: "Safe, structured, and meaningful journeys designed for midlife and retired adults — leisure, culture, and community.",
     href: "#mobility",
     image: travel,
   },
-];
-
-const moreVerticals = [
   {
     tag: "Digital Academy",
+    category: "Learning & Digital Inclusion",
     title: "Digital fluency for the wisdom years.",
     body: "Practical digital literacy, AI tools and remote-work skills for adults 45 and above.",
-    image: academy,
     href: "#academy",
+    image: academy,
   },
   {
     tag: "ActiveLife",
+    category: "Wellbeing & Community",
     title: "Movement, community and longevity.",
     body: "Walking groups, yoga, dance fitness and community sports for healthier, connected lives.",
-    image: activelife,
     href: "#activelife",
+    image: activelife,
   },
   {
     tag: "Purpose Lab",
+    category: "Experience & Impact",
     title: "Turning lifelong experience into impact.",
     body: "Mentorship, advisory and consulting pathways that turn lifelong experience into impact.",
-    image: purposelab,
     href: "#purposelab",
+    image: purposelab,
   },
 ];
 
@@ -57,23 +69,22 @@ export const InitiativesTeaser = () => (
           </h2>
         </div>
         <p className="max-w-md text-muted-foreground">
-          ReEngage Africa runs integrated initiatives that keep our experienced generation productive,
-          healthy, connected and globally engaged.
+          ReEngage Africa brings together initiatives that create opportunities for Africa's
+          experienced generation to remain productive, connected, purposeful and engaged.
         </p>
       </div>
 
-
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
+      <div className="mt-10 grid gap-4 md:gap-5 md:grid-cols-2">
         {initiatives.map((i) => (
           <a
             key={i.tag}
             href={i.href}
             className="group relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
           >
-            <div className="relative aspect-[5/4] overflow-hidden">
+            <div className="relative aspect-[4/3] md:aspect-[5/4] overflow-hidden">
               <img
                 src={i.image}
-                alt={i.tag}
+                alt={`ReEngage ${i.tag}`}
                 loading="lazy"
                 width={1200}
                 height={800}
@@ -81,47 +92,27 @@ export const InitiativesTeaser = () => (
               />
               <div className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-night/10" />
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-night/90 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
-                  ReEngage {i.tag}
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span
+                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.18em] ${
+                      i.flagship
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-accent text-accent-foreground"
+                    }`}
+                  >
+                    ReEngage {i.tag}
+                    {i.flagship && <Star className="h-3 w-3 fill-current" />}
+                  </span>
+                </div>
+                <span className="mt-2 text-[11px] uppercase tracking-[0.18em] text-night-foreground/70">
+                  {i.category}
                 </span>
-                <h3 className="mt-4 font-serif text-2xl md:text-3xl text-balance">{i.title}</h3>
-                <p className="mt-3 max-w-md text-sm text-night-foreground/90">{i.body}</p>
-                <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-night-foreground">
-                  Learn more
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-
-      <div className="mt-5 grid gap-5 md:grid-cols-3">
-        {moreVerticals.map((v) => (
-          <a
-            key={v.tag}
-            href={v.href}
-            className="group relative overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
-          >
-            <div className="relative aspect-[5/4] overflow-hidden">
-              <img
-                src={v.image}
-                alt={v.tag}
-                loading="lazy"
-                width={1200}
-                height={960}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-night/10" />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-night/90 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
-                  ReEngage {v.tag}
-                </span>
-                <h3 className="mt-4 font-serif text-2xl md:text-3xl text-balance">{v.title}</h3>
-                <p className="mt-3 max-w-md text-sm text-night-foreground/90">{v.body}</p>
-                <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-night-foreground">
+                <h3 className="mt-3 font-serif text-xl md:text-2xl lg:text-3xl text-balance">
+                  {i.title}
+                </h3>
+                <p className="mt-2 md:mt-3 max-w-md text-sm text-night-foreground/90">{i.body}</p>
+                <span className="mt-4 md:mt-6 inline-flex items-center gap-1 text-sm font-medium text-night-foreground">
                   Learn more
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
