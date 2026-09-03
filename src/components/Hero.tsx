@@ -9,15 +9,15 @@ export const Hero = () => {
     <section id="top" className="relative isolate overflow-hidden bg-night text-night-foreground">
       <div className="relative min-h-[88svh] md:min-h-[92svh]">
         <picture className="absolute inset-0 h-full w-full">
-          <source media="(min-width: 768px)" srcSet={heroImg} />
           <img
-            src={heroMobileImg}
+            src={heroImg}
             alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
-            width={768}
-            height={1024}
-            className="h-full w-full object-cover object-[55%_25%] md:object-[50%_17%]"
+            width={1920}
+            height={1088}
+            className="h-full w-full object-cover object-[62%_30%] md:object-[50%_17%]"
           />
         </picture>
+
         {/* Legibility gradients */}
         <div className="absolute inset-0 bg-gradient-night opacity-90 lg:opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-r from-night/65 via-night/20 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
