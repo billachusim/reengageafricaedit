@@ -15,7 +15,7 @@ export const Hero = () => {
             alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
             width={456}
             height={544}
-            className="h-full w-full object-cover object-[55%_35%] md:object-[62%_center]"
+            className="h-full w-full object-cover object-[55%_35%]"
           />
         </picture>
         {/* Legibility gradients */}
