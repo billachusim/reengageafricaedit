@@ -22,7 +22,7 @@ export const HowItWorks = () => (
   <section className="relative bg-secondary/40 py-16 md:py-24">
     <div className="container">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-xs uppercase tracking-[0.2em] text-primary">How African Voices works</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-primary">How ReEngage Voices works</p>
         <h2 className="mt-3 font-serif text-3xl md:text-5xl text-balance">
           Three quiet acts of remembrance
         </h2>

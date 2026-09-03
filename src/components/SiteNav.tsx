@@ -47,7 +47,7 @@ export const SiteNav = () => {
               scrolled ? "text-foreground" : "text-night-foreground"
             )}
           >
-            ReEngage <span className="text-white">Africa</span>
+            ReEngage <span className="text-primary">Africa</span>
           </span>
         </a>
 
@@ -66,7 +66,7 @@ export const SiteNav = () => {
           ))}
           <Button asChild size="sm" className="bg-gradient-warm text-primary-foreground shadow-warm hover:opacity-95">
             <a href={VOICES_URL}>
-              Enter Voices <ArrowRight className="ml-1 h-4 w-4" />
+              ReEngage Voices <ArrowRight className="ml-1 h-4 w-4" />
             </a>
           </Button>
         </div>
@@ -98,7 +98,7 @@ export const SiteNav = () => {
             ))}
             <Button asChild className="mt-2 bg-gradient-warm text-primary-foreground">
               <a href={VOICES_URL} onClick={() => setOpen(false)}>
-                Enter Voices <ArrowRight className="ml-1 h-4 w-4" />
+                ReEngage Voices <ArrowRight className="ml-1 h-4 w-4" />
               </a>
             </Button>
           </div>
