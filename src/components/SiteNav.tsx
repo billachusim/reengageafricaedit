@@ -39,11 +39,11 @@ export const SiteNav = () => {
             alt="ReEngage Africa"
             width={40}
             height={40}
-            className="h-10 w-10 rounded-full object-contain transition-transform group-hover:scale-105"
+            className="h-10 w-10 rounded-full object-contain transition-transform group-hover:scale-105 lg:h-12 lg:w-12"
           />
           <span
             className={cn(
-              "font-serif text-lg font-semibold tracking-tight",
+              "font-serif text-lg font-semibold tracking-tight lg:text-xl",
               scrolled ? "text-foreground" : "text-night-foreground"
             )}
           >
@@ -51,20 +51,20 @@ export const SiteNav = () => {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 lg:gap-11">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors hover:text-primary lg:text-base",
                 scrolled ? "text-foreground/80" : "text-night-foreground/85"
               )}
             >
               {l.label}
             </a>
           ))}
-          <Button asChild size="sm" className="bg-gradient-warm text-primary-foreground shadow-warm hover:opacity-95">
+          <Button asChild size="sm" className="bg-gradient-warm text-primary-foreground shadow-warm hover:opacity-95 lg:h-10 lg:px-5 lg:text-base">
             <a href={VOICES_URL}>
               ReEngage Voices <ArrowRight className="ml-1 h-4 w-4" />
             </a>
