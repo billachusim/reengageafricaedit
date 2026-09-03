@@ -16,7 +16,11 @@ export const AboutBlock = () => (
           and create spaces where they thrive.
         </p>
 
-        <div className="mt-10 grid grid-cols-3 gap-6 border-t border-night-foreground/15 pt-8">
+        <div className="mt-10 border-t border-night-foreground/15 pt-8">
+          <p className="text-xs uppercase tracking-[0.18em] text-night-foreground/60">
+            Through ReEngage Voices, our flagship cultural archive
+          </p>
+          <div className="mt-4 grid grid-cols-3 gap-6">
           <div>
             <p className="font-serif text-4xl text-accent">120+</p>
             <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Stories archived</p>
@@ -28,6 +32,7 @@ export const AboutBlock = () => (
           <div>
             <p className="font-serif text-4xl text-accent">9</p>
             <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Countries</p>
+          </div>
           </div>
         </div>
       </div>

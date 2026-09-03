@@ -31,7 +31,7 @@ export const SiteFooter = () => (
       <div>
         <h4 className="font-serif text-sm uppercase tracking-[0.18em] text-night-foreground/60">Initiatives</h4>
         <ul className="mt-4 space-y-2 text-sm">
-          <li><a href={VOICES_URL} className="hover:text-primary">African Voices</a></li>
+          <li><a href={VOICES_URL} className="hover:text-primary">ReEngage Voices</a></li>
           <li><a href="#initiatives" className="hover:text-primary">AgriVentures</a></li>
           <li><a href="#initiatives" className="hover:text-primary">Global Mobility</a></li>
           <li><a href="#initiatives" className="hover:text-primary">Digital Academy</a></li>

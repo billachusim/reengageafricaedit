@@ -46,7 +46,7 @@ export const StoryCard = ({ story, featured = false }: { story: Story; featured?
           {story.title}
         </h3>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          A short story passed down through generations, recorded as part of the ReEngage African Voices archive.
+          A short story passed down through generations, recorded as part of the ReEngage Voices archive.
         </p>
 
         <div className="mt-auto flex items-center gap-3">
