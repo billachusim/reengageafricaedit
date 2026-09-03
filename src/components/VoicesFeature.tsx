@@ -6,7 +6,19 @@ import storyArt from "@/assets/voices-frog-story.png.asset.json";
 export const VoicesFeature = () => (
   <div className="mt-12 md:mt-16">
     <div className="grid gap-8 md:gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:items-center">
-      {/* Mobile order: Voices intro first, then story block (image + title + desc + buttons) */}
+      {/* Desktop-only artwork column */}
+      <figure className="relative hidden overflow-hidden rounded-3xl border border-border shadow-card lg:block">
+        <img
+          src={storyArt.url}
+          alt="Illustration for the Igbo folktale Why Frogs Do Not Have Tails"
+          loading="lazy"
+          width={1600}
+          height={1600}
+          className="aspect-square h-full w-full object-cover"
+        />
+      </figure>
+
+      {/* Intro + featured story block */}
       <div className="flex flex-col gap-8 lg:order-2">
         <div className="max-w-xl">
           <p className="text-xs uppercase tracking-[0.22em] text-primary">ReEngage Voices</p>
@@ -25,7 +37,8 @@ export const VoicesFeature = () => (
             Now playing on ReEngage Voices
           </p>
 
-          <figure className="relative mt-4 overflow-hidden rounded-3xl border border-border shadow-card">
+          {/* Mobile artwork appears here, inside the featured story block */}
+          <figure className="relative mt-4 overflow-hidden rounded-3xl border border-border shadow-card lg:hidden">
             <img
               src={storyArt.url}
               alt="Illustration for the Igbo folktale Why Frogs Do Not Have Tails"
