@@ -1,17 +1,19 @@
 import { ArrowUpRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VOICES_URL, VOICES_FROG_STORY_URL } from "@/config/links";
-import storyArt from "@/assets/voices-frog-story.jpg";
+import storyArt from "@/assets/voices-frog-story.png.asset.json";
 
 export const VoicesFeature = () => (
   <div className="mt-12 md:mt-16">
     <div className="grid items-center gap-8 md:gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)]">
       <figure className="relative overflow-hidden rounded-3xl border border-border shadow-card">
         <img
-          src={storyArt}
+          src={storyArt.url}
           alt="Illustration for the Igbo folktale Why Frogs Do Not Have Tails"
           loading="lazy"
-          className="h-full w-full object-cover"
+          width={1600}
+          height={1600}
+          className="aspect-square h-full w-full object-cover"
         />
       </figure>
 
