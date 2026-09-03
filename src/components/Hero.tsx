@@ -1,37 +1,59 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-elder.jpg";
+import { VOICES_URL } from "@/config/links";
+import heroImg from "@/assets/hero-main.jpg";
 
 export const Hero = () => {
   return (
-    <section id="top" className="relative isolate min-h-[100svh] overflow-hidden bg-night text-night-foreground">
-      <img
-        src={heroImg}
-        alt="Elder African woman in traditional headwrap and beaded earrings"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
-      />
-      <div className="absolute inset-0 bg-gradient-night" />
-      <div className="absolute inset-0 grain pointer-events-none" />
+    <section id="top" className="relative isolate overflow-hidden bg-night text-night-foreground">
+      <div className="relative min-h-[88svh] md:min-h-[92svh]">
+        <img
+          src={heroImg}
+          alt="Confident older African woman overlooking a city skyline at golden hour"
+          width={1920}
+          height={1088}
+          className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-center"
+        />
+        {/* Legibility gradients */}
+        <div className="absolute inset-0 bg-gradient-night" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/80 via-night/30 to-transparent" />
+        <div className="absolute inset-0 grain pointer-events-none" />
 
-      <div className="relative container flex min-h-[100svh] flex-col justify-end pb-16 pt-32 md:justify-center md:pb-24">
-        <div className="max-w-2xl animate-fade-up">
-          <h1 className="mt-6 font-serif text-5xl leading-[1.02] tracking-tight md:text-7xl text-balance">
-            Wisdom <em className="not-italic text-accent">meets</em> the future.
-          </h1>
+        <div className="relative container flex min-h-[88svh] flex-col justify-end pb-20 pt-32 md:min-h-[92svh] md:justify-center md:pb-28">
+          <div className="max-w-2xl animate-fade-up">
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-accent">
+              ReEngage Africa
+            </p>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-night-foreground/85 md:text-lg">
-            ReEngage Africa is building an ecosystem for Africa's experienced generation — enterprise,
-            culture, learning, wellbeing and purpose, across the continent and beyond.
-          </p>
+            <h1 className="mt-5 font-serif text-4xl leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+              Africa's future needs the{" "}
+              <em className="not-italic text-accent">wisdom</em>, experience and
+              potential of its older generation.
+            </h1>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Button asChild size="lg" className="bg-gradient-warm text-primary-foreground shadow-warm hover:opacity-95">
-              <a href="#initiatives">
-                Explore our initiatives <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-night-foreground/85 md:text-lg">
+              ReEngage Africa is reimagining what it means to grow older in Africa —
+              creating opportunities for older adults to remain connected, purposeful,
+              productive and engaged in the life of the continent.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Button asChild size="lg" className="bg-gradient-warm text-primary-foreground shadow-warm hover:opacity-95">
+                <a href="#initiatives">
+                  Explore our initiatives <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-night-foreground/40 bg-night/20 text-night-foreground backdrop-blur-sm hover:bg-night-foreground/10 hover:text-night-foreground"
+              >
+                <a href={VOICES_URL}>
+                  Explore ReEngage Voices <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
