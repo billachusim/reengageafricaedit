@@ -14,11 +14,12 @@ export const Hero = () => {
           className="absolute inset-0 md:hidden"
           style={{
             backgroundImage: `url(${heroMobileImg})`,
-            backgroundSize: "180% auto",
-            backgroundPosition: "105% 45%",
+            backgroundSize: "cover",
+            backgroundPosition: "50% 42%",
             backgroundRepeat: "no-repeat",
           }}
           aria-hidden="true"
+
         />
 
         {/* Desktop picture (unchanged) */}
