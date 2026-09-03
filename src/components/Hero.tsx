@@ -7,15 +7,16 @@ export const Hero = () => {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-night text-night-foreground">
       <div className="relative min-h-[88svh] md:min-h-[92svh]">
-        <picture className="absolute inset-0 h-full w-full">
+        <picture className="absolute inset-0 block h-full w-full overflow-hidden">
           <img
             src={heroImg}
             alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
             width={1920}
             height={1088}
-            className="h-full w-full object-cover object-[62%_30%] md:object-[50%_17%]"
+            className="absolute left-[-30%] top-0 w-[160%] max-w-none md:inset-0 md:left-0 md:h-full md:w-full md:object-cover md:object-[50%_17%]"
           />
         </picture>
+
 
         {/* Legibility gradients */}
         <div className="absolute inset-0 bg-gradient-night opacity-90 lg:opacity-70" />
