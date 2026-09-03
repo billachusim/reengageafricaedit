@@ -55,7 +55,7 @@ export const InitiativesTeaser = () => (
     <div className="container">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary">Our initiatives</p>
+          <p className="text-sm md:text-[15px] uppercase tracking-[0.2em] text-primary">Our initiatives</p>
           <h2 className="mt-3 font-serif text-3xl md:text-5xl text-balance">
             One vision, expressed across the continent.
           </h2>
