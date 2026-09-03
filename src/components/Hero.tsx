@@ -14,8 +14,8 @@ export const Hero = () => {
           className="absolute inset-0 md:hidden"
           style={{
             backgroundImage: `url(${heroMobileImg})`,
-            backgroundSize: "180% auto",
-            backgroundPosition: "105% 45%",
+            backgroundSize: "185% auto",
+            backgroundPosition: "103% 45%",
             backgroundRepeat: "no-repeat",
           }}
           aria-hidden="true"
