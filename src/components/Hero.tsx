@@ -25,7 +25,7 @@ export const Hero = () => {
               ReEngage Africa
             </p>
 
-            <h1 className="mt-5 font-serif text-4xl leading-[1.08] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 font-serif text-4xl leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Africa's future needs the{" "}
               <em className="not-italic text-accent">wisdom</em>, experience and
               potential of its older generation.
