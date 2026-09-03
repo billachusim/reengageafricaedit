@@ -1,21 +1,13 @@
-import { ArrowUpRight, Star } from "lucide-react";
-import voices from "@/assets/elder-new-1.jpg";
+import { ArrowUpRight } from "lucide-react";
 import agri from "@/assets/agri.jpg";
 import travel from "@/assets/travel.jpg";
 import academy from "@/assets/vertical-academy.jpg";
 import activelife from "@/assets/vertical-activelife.jpg";
 import purposelab from "@/assets/vertical-purposelab.jpg";
+import { VoicesFeature } from "@/components/VoicesFeature";
 
 const initiatives = [
-  {
-    tag: "Voices",
-    category: "Culture & Memory",
-    title: "Stories, folklore and lived experience preserved for the future.",
-    body: "Our flagship initiative records and shares the wisdom, memory and cultural heritage of Africa's older generation.",
-    href: "#voices",
-    image: voices,
-    flagship: true,
-  },
+
   {
     tag: "AgriVentures",
     category: "Work & Enterprise",
@@ -74,7 +66,10 @@ export const InitiativesTeaser = () => (
         </p>
       </div>
 
-      <div className="mt-10 grid gap-4 md:gap-5 md:grid-cols-2">
+      <VoicesFeature />
+
+      <div className="mt-14 md:mt-20 grid gap-4 md:gap-5 md:grid-cols-2">
+
         {initiatives.map((i) => (
           <a
             key={i.tag}
@@ -94,17 +89,11 @@ export const InitiativesTeaser = () => (
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-night/90 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-night-foreground [text-shadow:0_1px_2px_rgb(0_0_0_/_0.45)]">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span
-                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.18em] ${
-                      i.flagship
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-accent text-accent-foreground"
-                    }`}
-                  >
+                  <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accent-foreground">
                     ReEngage {i.tag}
-                    {i.flagship && <Star className="h-3 w-3 fill-current" />}
                   </span>
                 </div>
+
                 <span className="mt-2 text-[11px] uppercase tracking-[0.18em] text-night-foreground/70">
                   {i.category}
                 </span>
