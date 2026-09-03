@@ -19,8 +19,8 @@ export const Hero = () => {
           />
         </picture>
         {/* Legibility gradients */}
-        <div className="absolute inset-0 bg-gradient-night lg:opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-night/80 via-night/30 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
+        <div className="absolute inset-0 bg-gradient-night opacity-90 lg:opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/65 via-night/20 to-transparent lg:from-night/85 lg:via-night/35 lg:to-night/0" />
         {/* Desktop-only directional gradient: dark on the text side, clear over the subject */}
         <div className="absolute inset-0 hidden lg:block bg-gradient-to-l from-transparent via-transparent to-night/45" />
         <div className="absolute inset-0 grain pointer-events-none" />
