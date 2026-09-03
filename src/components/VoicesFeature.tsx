@@ -21,7 +21,7 @@ export const VoicesFeature = () => (
       {/* Intro + featured story block */}
       <div className="flex flex-col gap-8 lg:order-2">
         <div className="max-w-xl">
-          <p className="text-xs uppercase tracking-[0.22em] text-primary">ReEngage Voices</p>
+          <p className="text-sm md:text-[15px] uppercase tracking-[0.22em] text-primary">ReEngage Voices</p>
           <h3 className="mt-3 font-serif text-3xl leading-tight md:text-4xl lg:text-[2.75rem] text-balance">
             A living archive of African memory, wisdom and lived experience.
           </h3>
@@ -33,7 +33,7 @@ export const VoicesFeature = () => (
         </div>
 
         <div className="border-t border-border/70 pt-6">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
             Now playing on ReEngage Voices
           </p>
 
