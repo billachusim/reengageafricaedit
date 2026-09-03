@@ -8,14 +8,28 @@ export const Hero = () => {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-night text-night-foreground">
       <div className="relative min-h-[88svh] md:min-h-[92svh]">
-        <picture className="absolute inset-0 block h-full w-full overflow-hidden">
+        {/* Mobile background: zoomed + right-weighted crop so the group sits
+            clear of the headline while the left side stays dark/quiet. */}
+        <div
+          className="absolute inset-0 md:hidden"
+          style={{
+            backgroundImage: `url(${heroMobileImg})`,
+            backgroundSize: "180% auto",
+            backgroundPosition: "105% 45%",
+            backgroundRepeat: "no-repeat",
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Desktop picture (unchanged) */}
+        <picture className="absolute inset-0 hidden h-full w-full overflow-hidden md:block">
           <source media="(min-width: 768px)" srcSet={heroImg} />
           <img
             src={heroMobileImg}
             alt="Elder African man and woman sharing wisdom with younger adults in a warm intergenerational gathering"
             width={848}
             height={1264}
-            className="h-full w-full object-cover object-[50%_35%] md:object-[50%_17%]"
+            className="h-full w-full object-cover md:object-[50%_17%]"
           />
         </picture>
 
