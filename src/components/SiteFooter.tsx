@@ -4,7 +4,7 @@ import logo from "@/assets/reengage-logo.png";
 
 export const SiteFooter = () => (
   <footer className="bg-night text-night-foreground">
-    <div className="container grid gap-10 py-16 md:grid-cols-4">
+    <div className="container grid gap-8 py-12 md:grid-cols-4 md:gap-10 md:py-16">
       <div className="md:col-span-2">
         <div className="flex items-center gap-2.5">
           <img src={logo} alt="ReEngage Africa" width={40} height={40} className="h-10 w-10 rounded-full object-contain" />
@@ -51,7 +51,7 @@ export const SiteFooter = () => (
     </div>
 
     <div className="border-t border-night-foreground/10">
-      <div className="container flex flex-col items-center justify-between gap-3 py-6 text-xs text-night-foreground/60 md:flex-row">
+      <div className="container flex flex-col items-center justify-between gap-3 py-5 text-xs text-night-foreground/60 md:flex-row md:py-6">
         <p>© {new Date().getFullYear()} ReEngage Africa. All rights reserved.</p>
         <p>Made with care for the wisdom of a continent.</p>
       </div>
