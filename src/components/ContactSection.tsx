@@ -64,10 +64,11 @@ export const ContactSection = () => {
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLFormElement>) => {
-    const field = e.target as HTMLInputElement | HTMLTextAreaElement;
-    if (!field.name) return;
-    setTouched((prev) => ({ ...prev, [field.name]: true }));
-    setErrors(validate(field.form));
+    const target = e.target;
+    if (!(target instanceof HTMLInputElement) && !(target instanceof HTMLTextAreaElement)) return;
+    if (!target.name) return;
+    setTouched((prev) => ({ ...prev, [target.name]: true }));
+    setErrors(validate(target.form));
   };
 
   return (
