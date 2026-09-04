@@ -51,7 +51,7 @@ export const SiteFooter = () => (
     </div>
 
     <div className="border-t border-night-foreground/10">
-      <div className="container flex flex-col items-center justify-between gap-3 py-6 text-xs text-night-foreground/60 md:flex-row">
+      <div className="container flex flex-col items-center justify-between gap-3 py-5 text-xs text-night-foreground/60 md:flex-row md:py-6">
         <p>© {new Date().getFullYear()} ReEngage Africa. All rights reserved.</p>
         <p>Made with care for the wisdom of a continent.</p>
       </div>
