@@ -18,21 +18,30 @@ export const AboutBlock = () => (
 
         <div className="mt-10 border-t border-night-foreground/15 pt-8">
           <p className="text-xs uppercase tracking-[0.18em] text-night-foreground/60">
-            Through ReEngage Voices, our flagship cultural archive
+            What we're building
           </p>
-          <div className="mt-4 grid grid-cols-3 gap-6">
-          <div>
-            <p className="font-serif text-4xl text-accent">15+</p>
-            <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Stories archived</p>
-          </div>
-          <div>
-            <p className="font-serif text-4xl text-accent">4</p>
-            <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Languages</p>
-          </div>
-          <div>
-            <p className="font-serif text-4xl text-accent">3</p>
-            <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Countries</p>
-          </div>
+          <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+            <div>
+              <p className="font-serif text-3xl text-accent">Stories</p>
+              <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Preserved</p>
+              <p className="mt-2 text-sm leading-relaxed text-night-foreground/75">
+                Voices, memories and lived experiences captured for future generations.
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl text-accent">Experience</p>
+              <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Activated</p>
+              <p className="mt-2 text-sm leading-relaxed text-night-foreground/75">
+                Creating pathways for older adults to contribute, learn, work and remain connected.
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl text-accent">Generations</p>
+              <p className="mt-1 text-xs uppercase tracking-wider text-night-foreground/65">Connected</p>
+              <p className="mt-2 text-sm leading-relaxed text-night-foreground/75">
+                Creating spaces where experience can be shared across generations.
+              </p>
+            </div>
           </div>
         </div>
       </div>
