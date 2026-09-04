@@ -4,7 +4,7 @@ import logo from "@/assets/reengage-logo.png";
 
 export const SiteFooter = () => (
   <footer className="bg-night text-night-foreground">
-    <div className="container grid gap-10 py-16 md:grid-cols-4">
+    <div className="container grid gap-8 py-12 md:grid-cols-4 md:gap-10 md:py-16">
       <div className="md:col-span-2">
         <div className="flex items-center gap-2.5">
           <img src={logo} alt="ReEngage Africa" width={40} height={40} className="h-10 w-10 rounded-full object-contain" />
