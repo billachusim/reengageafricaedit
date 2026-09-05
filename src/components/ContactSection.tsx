@@ -72,11 +72,11 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="bg-background py-16 md:py-24">
+    <section id="contact" className="bg-background py-20 md:py-28">
       <div className="container grid gap-12 md:grid-cols-2 md:items-center">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-primary">Get in touch</p>
-          <h2 className="mt-3 font-serif text-3xl md:text-5xl text-balance">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary md:text-sm">Get in touch</p>
+          <h2 className="mt-4 font-serif text-3xl leading-[1.1] text-balance md:text-[2.75rem] lg:text-5xl">
             Have a story to share? A partnership in mind?
           </h2>
           <p className="mt-5 text-muted-foreground">
@@ -102,7 +102,7 @@ export const ContactSection = () => {
           onSubmit={onSubmit}
           onBlur={handleBlur}
           noValidate
-          className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8 md:p-10"
+          className="rounded-3xl border border-border bg-card p-6 shadow-card sm:p-8 md:p-10"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>

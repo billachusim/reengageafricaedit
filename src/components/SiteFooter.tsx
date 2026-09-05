@@ -29,7 +29,7 @@ export const SiteFooter = () => (
       </div>
 
       <div>
-        <h4 className="font-serif text-sm uppercase tracking-[0.18em] text-night-foreground/60">Initiatives</h4>
+        <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-night-foreground/60">Initiatives</h4>
         <ul className="mt-4 space-y-2 text-sm">
           <li><a href={VOICES_URL} className="hover:text-primary">ReEngage Voices</a></li>
           <li><a href="#initiatives" className="hover:text-primary">AgriVentures</a></li>
@@ -41,7 +41,7 @@ export const SiteFooter = () => (
       </div>
 
       <div>
-        <h4 className="font-serif text-sm uppercase tracking-[0.18em] text-night-foreground/60">Organization</h4>
+        <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-night-foreground/60">Organization</h4>
         <ul className="mt-4 space-y-2 text-sm">
           <li><a href="#about" className="hover:text-primary">About</a></li>
           <li><a href="#contact" className="hover:text-primary">Contact</a></li>

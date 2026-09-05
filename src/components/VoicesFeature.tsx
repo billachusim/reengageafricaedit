@@ -21,11 +21,11 @@ export const VoicesFeature = () => (
       {/* Intro + featured story block */}
       <div className="flex flex-col gap-8 lg:order-2">
         <div className="max-w-xl">
-          <p className="text-sm md:text-[15px] uppercase tracking-[0.22em] text-primary">ReEngage Voices</p>
-          <h3 className="mt-3 font-serif text-3xl leading-tight md:text-4xl lg:text-[2.75rem] text-balance">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary md:text-sm">ReEngage Voices</p>
+          <h3 className="mt-4 font-serif text-[1.75rem] leading-[1.12] text-balance md:text-4xl lg:text-[2.5rem]">
             A living archive of African memory, wisdom and lived experience.
           </h3>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
             ReEngage Voices is our flagship cultural archive, preserving the stories, knowledge,
             traditions and lived experiences of Africa's older generation — and making them
             accessible to the generations that follow.
@@ -33,7 +33,7 @@ export const VoicesFeature = () => (
         </div>
 
         <div className="border-t border-border/70 pt-6">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground md:text-sm">
             Now playing on ReEngage Voices
           </p>
 
@@ -54,14 +54,14 @@ export const VoicesFeature = () => (
             procrastination can be.
           </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button asChild size="lg" className="bg-gradient-warm text-primary-foreground shadow-warm">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button asChild size="lg" className="h-12 bg-gradient-warm px-7 text-primary-foreground shadow-warm hover:opacity-95">
               <a href={VOICES_FROG_STORY_URL}>
                 <Play className="mr-2 h-4 w-4" fill="currentColor" />
                 Listen to the story
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="h-12 px-7">
               <a href={VOICES_URL}>
                 Explore ReEngage Voices
                 <ArrowUpRight className="ml-2 h-4 w-4" />

@@ -1,10 +1,10 @@
 export const AboutBlock = () => (
-  <section id="about" className="relative overflow-hidden bg-night py-16 text-night-foreground md:py-24">
+  <section id="about" className="relative overflow-hidden bg-night py-20 text-night-foreground md:py-28">
     <div className="absolute inset-0 grain pointer-events-none" />
     <div className="container relative grid gap-12 md:grid-cols-12 md:items-center">
       <div className="md:col-span-5">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent">About ReEngage Africa</p>
-        <h2 className="mt-3 font-serif text-3xl md:text-5xl text-balance">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent md:text-sm">About ReEngage Africa</p>
+        <h2 className="mt-4 font-serif text-3xl leading-[1.1] text-balance md:text-[2.75rem] lg:text-5xl">
           We believe Africa's elders are not behind us. They are <em className="not-italic text-accent">ahead of us</em>.
         </h2>
       </div>
@@ -17,7 +17,7 @@ export const AboutBlock = () => (
         </p>
 
         <div className="mt-10 border-t border-night-foreground/15 pt-8">
-          <p className="text-xs uppercase tracking-[0.18em] text-night-foreground/60">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-night-foreground/60 md:text-sm">
             What we're building
           </p>
           <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
