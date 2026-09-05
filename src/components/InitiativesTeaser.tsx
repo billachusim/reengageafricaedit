@@ -53,20 +53,19 @@ const initiatives = [
 export const InitiativesTeaser = () => (
   <section id="initiatives" className="bg-background py-20 md:py-28 border-t border-border/60">
     <div className="container">
-      <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-xl">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary md:text-sm">Our initiatives</p>
-          <h2 className="mt-4 font-serif text-3xl leading-[1.1] text-balance md:text-[2.75rem] lg:text-5xl">
-            One vision, expressed across the continent.
-          </h2>
-        </div>
-        <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-          ReEngage Africa brings together initiatives that create opportunities for Africa's
-          experienced generation to remain productive, connected, purposeful and engaged.
+      <div className="max-w-xl">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary md:text-sm">Our initiatives</p>
+        <h2 className="mt-4 font-serif text-3xl leading-[1.1] text-balance md:text-[2.75rem] lg:text-5xl">
+          One vision, expressed across the continent.
+        </h2>
+        <p className="mt-5 md:mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+          Across our initiatives, we create pathways for Africa's older generation to remain productive, connected, purposeful and engaged.
         </p>
       </div>
 
-      <VoicesFeature />
+      <div className="mt-10 md:mt-12">
+        <VoicesFeature />
+      </div>
 
       <div className="mt-12 md:mt-16 grid gap-4 md:gap-5 md:grid-cols-2">
 
