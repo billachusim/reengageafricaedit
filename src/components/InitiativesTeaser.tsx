@@ -51,16 +51,16 @@ const initiatives = [
 ];
 
 export const InitiativesTeaser = () => (
-  <section id="initiatives" className="bg-background py-16 md:py-24 border-t border-border/60">
+  <section id="initiatives" className="bg-background py-20 md:py-28 border-t border-border/60">
     <div className="container">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
-          <p className="text-sm md:text-[15px] uppercase tracking-[0.2em] text-primary">Our initiatives</p>
-          <h2 className="mt-3 font-serif text-3xl md:text-5xl text-balance">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary md:text-sm">Our initiatives</p>
+          <h2 className="mt-4 font-serif text-3xl leading-[1.1] text-balance md:text-[2.75rem] lg:text-5xl">
             One vision, expressed across the continent.
           </h2>
         </div>
-        <p className="max-w-md text-muted-foreground">
+        <p className="max-w-md text-base leading-relaxed text-muted-foreground">
           ReEngage Africa brings together initiatives that create opportunities for Africa's
           experienced generation to remain productive, connected, purposeful and engaged.
         </p>
@@ -68,7 +68,7 @@ export const InitiativesTeaser = () => (
 
       <VoicesFeature />
 
-      <div className="mt-14 md:mt-20 grid gap-4 md:gap-5 md:grid-cols-2">
+      <div className="mt-12 md:mt-16 grid gap-4 md:gap-5 md:grid-cols-2">
 
         {initiatives.map((i) => (
           <a

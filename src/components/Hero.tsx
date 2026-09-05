@@ -61,7 +61,7 @@ export const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3 lg:mt-10 lg:gap-4">
-              <Button asChild size="lg" className="bg-gradient-warm text-primary-foreground shadow-warm hover:opacity-95 lg:h-[3.25rem] lg:px-8 lg:text-base">
+              <Button asChild size="lg" className="w-full justify-center bg-gradient-warm px-7 text-primary-foreground shadow-warm hover:opacity-95 sm:w-auto lg:h-[3.25rem] lg:px-8 lg:text-base">
                 <a href="#initiatives">
                   Explore our initiatives <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                 </a>
@@ -70,7 +70,7 @@ export const Hero = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-night-foreground/40 bg-night/20 text-night-foreground backdrop-blur-sm hover:bg-night-foreground/10 hover:text-night-foreground lg:h-[3.25rem] lg:px-8 lg:text-base"
+                className="w-full justify-center border-night-foreground/40 bg-night/20 px-7 text-night-foreground backdrop-blur-sm hover:bg-night-foreground/10 hover:text-night-foreground sm:w-auto lg:h-[3.25rem] lg:px-8 lg:text-base"
               >
                 <a href={VOICES_URL}>
                   Explore ReEngage Voices <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
