@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Mail, Send } from "lucide-react";
 
 type FormErrors = {
@@ -35,9 +36,10 @@ export const ContactSection = () => {
     return next;
   };
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+    if (submitting) return;
     const validation = validate(form);
     setErrors(validation);
     setTouched({ name: true, email: true, message: true });
@@ -50,9 +52,18 @@ export const ContactSection = () => {
       return;
     }
 
+    const data = new FormData(form);
+    const payload = {
+      name: ((data.get("name") as string | null) ?? "").trim(),
+      email: ((data.get("email") as string | null) ?? "").trim(),
+      message: ((data.get("message") as string | null) ?? "").trim(),
+    };
+
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      const { error } = await supabase.from("contact_messages").insert(payload);
+      if (error) throw error;
+
       form.reset();
       setErrors({});
       setTouched({});
@@ -60,8 +71,17 @@ export const ContactSection = () => {
         title: "Message sent",
         description: "Thank you — a member of our team will be in touch shortly.",
       });
-    }, 700);
+    } catch (err) {
+      toast({
+        variant: "destructive",
+        title: "Message not sent",
+        description: "Something went wrong. Please try again in a moment.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
+
 
   const handleBlur = (e: React.FocusEvent<HTMLFormElement>) => {
     const target = e.target;
