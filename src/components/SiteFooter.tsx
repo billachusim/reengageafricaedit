@@ -1,6 +1,17 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 import { VOICES_URL } from "@/config/links";
 import logo from "@/assets/reengage-logo.png";
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.25 1.83 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+  </svg>
+);
 
 export const SiteFooter = () => (
   <footer className="bg-night text-night-foreground">
@@ -16,10 +27,18 @@ export const SiteFooter = () => (
           Engaging elders. Enriching Africa. A platform for wisdom, work, and wonder in the second half of life.
         </p>
         <div className="mt-6 flex gap-3">
-          {[Instagram, Twitter, Facebook, Youtube].map((Icon, i) => (
+          {[
+            { Icon: Instagram, href: "https://www.instagram.com/reengage_africa?stkn=dmdqb3poOWpyZ2Qy", label: "Instagram" },
+            { Icon: TikTokIcon, href: "https://www.tiktok.com/@reengage_voices?_r=1&_t=ZS-99aR1l8Rzpy", label: "TikTok" },
+            { Icon: Facebook, href: "https://www.facebook.com/share/1Lrak6XX27/?mibextid=wwXIfr", label: "Facebook" },
+            { Icon: Youtube, href: "https://youtube.com/@reengagevoices?si=_WImyzWzZJa7u-i9", label: "YouTube" },
+          ].map(({ Icon, href, label }, i) => (
             <a
               key={i}
-              href="#"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
               className="grid h-10 w-10 place-items-center rounded-full border border-night-foreground/15 text-night-foreground/80 transition-colors hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               <Icon className="h-4 w-4" />
