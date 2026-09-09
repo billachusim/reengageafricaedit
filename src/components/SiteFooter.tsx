@@ -27,10 +27,18 @@ export const SiteFooter = () => (
           Engaging elders. Enriching Africa. A platform for wisdom, work, and wonder in the second half of life.
         </p>
         <div className="mt-6 flex gap-3">
-          {[Instagram, Twitter, Facebook, Youtube].map((Icon, i) => (
+          {[
+            { Icon: Instagram, href: "https://www.instagram.com/reengage_africa?stkn=dmdqb3poOWpyZ2Qy", label: "Instagram" },
+            { Icon: TikTokIcon, href: "https://www.tiktok.com/@reengage_voices?_r=1&_t=ZS-99aR1l8Rzpy", label: "TikTok" },
+            { Icon: Facebook, href: "https://www.facebook.com/share/1Lrak6XX27/?mibextid=wwXIfr", label: "Facebook" },
+            { Icon: Youtube, href: "https://youtube.com/@reengagevoices?si=_WImyzWzZJa7u-i9", label: "YouTube" },
+          ].map(({ Icon, href, label }, i) => (
             <a
               key={i}
-              href="#"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
               className="grid h-10 w-10 place-items-center rounded-full border border-night-foreground/15 text-night-foreground/80 transition-colors hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               <Icon className="h-4 w-4" />
